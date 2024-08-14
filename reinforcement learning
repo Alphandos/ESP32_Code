@@ -1,0 +1,29 @@
+import gym
+import numpy as np
+import time
+env  = gym.make("CartPole-v1", render_mode='human')
+(state, _) = env.reset()
+env.render()
+env.step(0)
+env.observation_space
+env.observation_space.high
+env.action_space
+env.spec
+env.spec.max_episode_steps
+env.spec.reward_threshold
+episodeNumber = 10000
+timeSteps = 100
+for episodeIndex in range(episodeNumber):
+    initial_state = env.reset
+env.render()
+appendedObservations = []
+for timeIndex in range(timeSteps):
+    random_action = env.action_space.sample()
+    observation, reward, terminated, truncated, info = env.step(random_action)
+    print("step", timeIndex, observation, reward, terminated, info)
+    appendedObservations. append(observation)
+    time.sleep(0.01)
+    if(terminated):
+        time.sleep(0.1)
+        break
+        env.close()
